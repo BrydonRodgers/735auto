@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing — Get a Wash Quote | 735 Auto</title>
-<meta name="description" content="735 Auto pricing is confirmed per quote via WhatsApp — commercial fleet contracts are negotiated per site, consumer washes quoted on vehicle size and tier. See typical West Coast market rates for context.">
-<meta name="keywords" content="car wash pricing Langebaan, mobile car wash quote, fleet washing rates Saldanha Bay">
+<title>Pricing — 735 Auto Car Wash &amp; Detailing Prices | Langebaan</title>
+<meta name="description" content="735 Auto's confirmed price list: sedan/hatch R150, SUV/bakkie R180, taxi/7-seater R220, bus R500. Plus detailing add-ons — ceramic coat, polish, claybar, valet and more. Book on WhatsApp.">
+<meta name="keywords" content="car wash prices Langebaan, mobile car wash rates, detailing prices Saldanha Bay, ceramic coat price, valet price">
 <meta name="author" content="735 Auto — BROD TRADERS, Langebaan">
-<meta property="og:title" content="735 Auto Pricing — Get a Quote on WhatsApp">
-<meta property="og:description" content="Commercial fleet contracts negotiated per site. Consumer washes quoted by vehicle size and tier. Message us for a firm price.">
+<meta property="og:title" content="735 Auto Pricing — Confirmed Car Wash &amp; Detailing Rates">
+<meta property="og:description" content="Sedan/hatch R150, SUV/bakkie R180, taxi/7-seater R220, bus R500 — plus ceramic coat, polish, claybar and valet add-ons. Book on WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://auto.laafstyl.org/pricing.html">
 <meta name="robots" content="index, follow">
@@ -75,24 +75,31 @@ main{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 20px 1
 .section-title{font-family:var(--fh);font-weight:800;font-size:1.6rem;text-transform:uppercase;color:var(--white);text-align:center;margin-bottom:14px;letter-spacing:-.5px}
 .section-sub{text-align:center;font-size:.9rem;color:var(--muted);max-width:640px;margin:0 auto 36px;line-height:1.7}
 
-/* QUOTE CARDS */
-.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:60px}
+/* PRICE CARDS */
+.pricing-section{margin-bottom:56px}
+.price-grid{display:grid;gap:18px}
+.wash-grid{grid-template-columns:repeat(4,1fr)}
+.addon-grid{grid-template-columns:repeat(4,1fr)}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.45);border-color:var(--border2)}
+.price-name{font-family:var(--fh);font-weight:700;font-size:.82rem;color:var(--light);margin-bottom:12px;text-transform:uppercase;letter-spacing:.03em;min-height:2.3em;display:flex;align-items:center;justify-content:center}
+.price-amount{font-family:var(--fh);font-weight:900;font-size:1.7rem;color:var(--green2)}
+.price-note{font-size:.72rem;color:var(--muted);margin-top:6px}
+
+.book-cta{text-align:center;margin:32px 0 56px}
+.book-cta-note{font-size:.8rem;color:var(--muted);margin-top:12px}
+
+/* QUOTE CARDS (commercial fleet — still per-contract) */
+.single-card-wrap{max-width:480px;margin:0 auto}
 .quote-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:34px 30px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s}
 .quote-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
 .quote-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
 .quote-card.commercial::before{background:linear-gradient(90deg,var(--blue),#a855f7)}
-.quote-card.consumer::before{background:linear-gradient(90deg,var(--green),var(--gold))}
 .quote-ico{font-size:2rem;margin-bottom:12px}
 .quote-card h3{font-family:var(--fh);font-weight:800;font-size:1.15rem;color:var(--white);margin-bottom:10px}
 .quote-card p{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:18px}
 .quote-wa-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--wa);color:#fff;border-radius:9px;font-family:var(--fh);font-size:.82rem;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;box-shadow:0 4px 16px rgba(37,211,102,.25);transition:background .2s,transform .2s}
 .quote-wa-btn:hover{background:#1eb659;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.4)}
-
-/* NOTICE - PRICING PENDING */
-.pending-notice{background:rgba(255,182,18,.06);border:1px solid rgba(255,182,18,.22);border-radius:var(--radius);padding:22px 26px;margin-bottom:56px;display:flex;align-items:flex-start;gap:14px}
-.pending-icon{font-size:22px;flex-shrink:0;margin-top:2px}
-.pending-text strong{color:var(--white);display:block;margin-bottom:3px;font-size:.92rem}
-.pending-text{font-size:.85rem;color:var(--muted);line-height:1.7}
 
 /* MARKET CONTEXT TABLE */
 .market-section{margin-bottom:56px}
@@ -105,11 +112,6 @@ table.market-table td:first-child{color:var(--white);font-weight:600}
 table.market-table tr:last-child td{border-bottom:none}
 .market-source{font-size:.72rem;color:var(--muted);text-align:right;padding:10px 18px;background:var(--bg2)}
 .market-caption{font-size:.78rem;color:var(--muted);margin-top:14px;line-height:1.7;text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
-
-/* CALCULATOR-STYLE NOTE for commercial */
-.commercial-note{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 28px;margin-top:20px}
-.commercial-note h4{font-family:var(--fh);font-size:.95rem;color:var(--white);margin-bottom:10px}
-.commercial-note p{font-size:.85rem;color:var(--muted);line-height:1.7}
 
 .faq-section{margin-bottom:56px}
 .faq-section-title{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:18px;text-align:center}
@@ -147,12 +149,16 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
 
 @media(max-width:900px){
   nav{padding:0 20px}.nav-links{display:none}.nav-mob{display:flex;margin-left:auto}
-  .quote-grid{grid-template-columns:1fr}
+  .wash-grid,.addon-grid{grid-template-columns:repeat(2,1fr)}
   .foot-inner{flex-direction:column;text-align:center}.foot-links{justify-content:center}
+}
+@media(max-width:520px){
+  .wash-grid,.addon-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
+<script src="password-gate.js"></script>
 <div class="orb orb-1"></div><div class="orb orb-2"></div>
 <div class="sa-stripe-top"><span></span><span></span><span></span><span></span></div>
 
@@ -196,38 +202,73 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
 <main>
   <section class="page-hero reveal">
     <div class="page-hero-badge">Pricing</div>
-    <h1>Every quote is a real quote —<br>no guessing on WhatsApp.</h1>
-    <p>735 Auto is a new division and we price every job properly: consumer washes by vehicle size and tier, commercial contracts by vehicle count, frequency and site access. Message us and we'll confirm a price before you book anything.</p>
+    <h1>Real prices —<br>no guessing on WhatsApp.</h1>
+    <p>Here's exactly what a wash or detailing job costs. No "message us for a quote" on any of this — the price you see below is the price you pay. Commercial fleet contracts are the one thing we still price per site.</p>
   </section>
 
-  <div class="quote-grid">
-    <div class="quote-card commercial reveal">
-      <div class="quote-ico">🏭</div>
-      <h3>Commercial Fleet Contracts</h3>
-      <p>No two fleets are the same — pricing is negotiated per contract based on vehicle count, wash frequency, and site access. Tell us what you're running and we'll come back with a monthly rate.</p>
-      <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20fleet%20washing%20contract" class="quote-wa-btn" target="_blank" rel="noopener">Request a Fleet Quote</a>
+  <!-- CAR WASH PRICING -->
+  <section class="pricing-section">
+    <div class="section-label reveal">Car Wash</div>
+    <h2 class="section-title reveal">Confirmed wash pricing</h2>
+    <p class="section-sub reveal">Priced by vehicle size. What's below is the door price — no hidden extras.</p>
+    <div class="price-grid wash-grid">
+      <div class="price-card reveal"><div class="price-name">Sedan / Hatchback</div><div class="price-amount">R150</div></div>
+      <div class="price-card reveal"><div class="price-name">SUV / Bakkie</div><div class="price-amount">R180</div></div>
+      <div class="price-card reveal"><div class="price-name">Taxi / 7-Seater</div><div class="price-amount">R220</div></div>
+      <div class="price-card reveal"><div class="price-name">Bus</div><div class="price-amount">R500</div></div>
     </div>
-    <div class="quote-card consumer reveal">
-      <div class="quote-ico">🚗</div>
-      <h3>Consumer Doorstep Washes</h3>
-      <p>Tell us your vehicle (hatch, sedan, SUV or bakkie) and which tier you want — Standard, Premium or Valet — and we'll WhatsApp you a firm price before we book your slot.</p>
-      <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20doorstep%20wash" class="quote-wa-btn" target="_blank" rel="noopener">Get a Wash Quote</a>
+  </section>
+
+  <!-- ADD-ON / DETAILING -->
+  <section class="pricing-section">
+    <div class="section-label reveal">Add-Ons</div>
+    <h2 class="section-title reveal">Detailing &amp; add-on services</h2>
+    <p class="section-sub reveal">Book alongside a wash, or on their own.</p>
+    <div class="price-grid addon-grid">
+      <div class="price-card reveal"><div class="price-name">Headlight Restoration</div><div class="price-amount">R350</div></div>
+      <div class="price-card reveal"><div class="price-name">Ceramic Coat</div><div class="price-amount">R500</div></div>
+      <div class="price-card reveal"><div class="price-name">Basic Polish</div><div class="price-amount">R700</div></div>
+      <div class="price-card reveal"><div class="price-name">Claybar + Polish</div><div class="price-amount">R950</div></div>
+      <div class="price-card reveal"><div class="price-name">Valet — Seats Only</div><div class="price-amount">R650</div></div>
+      <div class="price-card reveal"><div class="price-name">Valet — Whole Interior</div><div class="price-amount">R850</div></div>
+      <div class="price-card reveal">
+        <div class="price-name">Scratch Restoration + Touch-Up</div>
+        <div class="price-amount">R450</div>
+        <div class="price-note">Small area only</div>
+      </div>
+      <div class="price-card reveal"><div class="price-name">Engine Bay Clean</div><div class="price-amount">R300</div></div>
     </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <div class="book-cta reveal">
+    <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20to%20book%20a%20wash" class="quote-wa-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Book on WhatsApp — 063 501 6440
+    </a>
+    <p class="book-cta-note">Message your vehicle and preferred slot — we'll confirm and book you in.</p>
   </div>
 
-  <div class="pending-notice reveal">
-    <div class="pending-icon">ℹ️</div>
-    <div class="pending-text">
-      <strong>Why no price list yet?</strong>
-      735 Auto's rates are still under final review by the owner and business partner. Rather than publish numbers that might change, every booking gets a firm, confirmed quote on WhatsApp before you commit — so what you're told is what you pay.
+  <!-- COMMERCIAL FLEET (still per-contract) -->
+  <section class="pricing-section">
+    <div class="section-label reveal">Fleets &amp; Contracts</div>
+    <h2 class="section-title reveal">Commercial fleet contracts</h2>
+    <p class="section-sub reveal">The one thing not on a fixed price list — every fleet is different.</p>
+    <div class="single-card-wrap">
+      <div class="quote-card commercial reveal">
+        <div class="quote-ico">🏭</div>
+        <h3>Fleet Washing Contracts</h3>
+        <p>No two fleets are the same — pricing is negotiated per contract based on vehicle count, wash frequency, and site access. Tell us what you're running and we'll come back with a monthly rate.</p>
+        <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20fleet%20washing%20contract" class="quote-wa-btn" target="_blank" rel="noopener">Request a Fleet Quote</a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- MARKET CONTEXT -->
   <section class="market-section">
     <div class="section-label reveal">For Context</div>
     <h2 class="section-title reveal">Typical West Coast market pricing</h2>
-    <p class="section-sub reveal">This is published, publicly-available pricing from other mobile and on-site car wash operators researched in September 2026 — shown for context only. It is <strong style="color:#ccc">not</strong> 735 Auto's price list.</p>
+    <p class="section-sub reveal">This is published, publicly-available pricing from other mobile and on-site car wash operators researched in September 2026 — shown for comparison against 735 Auto's confirmed prices above.</p>
 
     <div class="market-table-wrap reveal">
       <table class="market-table">
@@ -243,19 +284,19 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       </table>
       <div class="market-source">Source: national mobile operator &amp; Cape Town fixed-premises operators, researched 2 Sept 2026</div>
     </div>
-    <p class="market-caption">Commercial fleet rates aren't published anywhere in this market — every operator, including us, negotiates those per contract. Prices drift; if you need a firm number for a bid or budget, ask us directly rather than relying on this table.</p>
+    <p class="market-caption">Commercial fleet rates aren't published anywhere in this market — every operator, including us, negotiates those per contract.</p>
   </section>
 
   <!-- FAQ -->
   <section class="faq-section">
     <div class="faq-section-title reveal">Pricing Questions</div>
     <details class="faq-item reveal">
-      <summary class="faq-q">Why can't I just see a price list?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-      <div class="faq-a">735 Auto's final rates are still being confirmed internally. We'd rather quote you accurately on WhatsApp than publish a number that changes before you book.</div>
+      <summary class="faq-q">Are these prices final?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <div class="faq-a">Yes — the prices on this page are our confirmed rates. No hidden fees or surprises on the day. Commercial fleet contracts are the only pricing negotiated case-by-case.</div>
     </details>
     <details class="faq-item reveal">
-      <summary class="faq-q">How fast will I get a quote?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-      <div class="faq-a">Message us your vehicle type and tier (or fleet size and frequency for commercial) on WhatsApp — we'll respond with a price and available slots.</div>
+      <summary class="faq-q">How do I book at these prices?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <div class="faq-a">Message us on WhatsApp with your vehicle type and any add-ons you want (or fleet size and frequency for commercial) and we'll confirm your slot.</div>
     </details>
     <details class="faq-item reveal">
       <summary class="faq-q">Does the B-BBEE Level 1 status affect pricing for commercial clients?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
@@ -264,9 +305,9 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   </section>
 
   <section class="cta-section reveal">
-    <h2>Ready for a firm quote?</h2>
-    <p>Tell us your vehicle or fleet on WhatsApp — we'll come back with a price.</p>
-    <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20wash%20quote" class="cta-primary" target="_blank" rel="noopener">Get a Quote on WhatsApp</a>
+    <h2>Ready to book?</h2>
+    <p>Message us your vehicle and preferred time — we'll confirm your slot.</p>
+    <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20to%20book%20a%20wash" class="cta-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
   </section>
 </main>
 
