@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Get a Wash Quote | 735 Auto</title>
+<meta name="description" content="735 Auto pricing is confirmed per quote via WhatsApp — commercial fleet contracts are negotiated per site, consumer washes quoted on vehicle size and tier. See typical West Coast market rates for context.">
+<meta name="keywords" content="car wash pricing Langebaan, mobile car wash quote, fleet washing rates Saldanha Bay">
+<meta name="author" content="735 Auto — BROD TRADERS, Langebaan">
+<meta property="og:title" content="735 Auto Pricing — Get a Quote on WhatsApp">
+<meta property="og:description" content="Commercial fleet contracts negotiated per site. Consumer washes quoted by vehicle size and tier. Message us for a firm price.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://auto.laafstyl.org/pricing.html">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#007847;--green2:#00a85f;--gold:#FFB612;--red:#DE3831;--blue:#00AEEF;--wa:#25D366;
+  --bg:#0f0f0f;--bg2:#161616;--card:#1c1c1c;--card2:#222222;
+  --border:#2a2a2a;--border2:#333333;--muted:#666;--body:#888;--light:#bbb;--white:#fff;
+  --radius:18px;--fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px}
+body{background:var(--bg);color:var(--body);font-family:var(--fb);font-size:16px;line-height:1.7;overflow-x:hidden}
+a{color:inherit}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;animation:drift 14s ease-in-out infinite alternate}
+.orb-1{width:600px;height:600px;background:var(--gold);top:-200px;left:-200px;opacity:.1}
+.orb-2{width:500px;height:500px;background:var(--blue);bottom:-150px;right:-150px;opacity:.1;animation-delay:-5s}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(40px,30px)}}
+@keyframes waRing{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 36px rgba(37,211,102,.65),0 0 0 8px rgba(37,211,102,.07)}}
+
+.sa-stripe-top{height:4px;display:flex;position:sticky;top:0;z-index:210}
+.sa-stripe-top span{flex:1}
+.sa-stripe-top span:nth-child(1){background:var(--green)}.sa-stripe-top span:nth-child(2){background:var(--gold)}
+.sa-stripe-top span:nth-child(3){background:var(--red)}.sa-stripe-top span:nth-child(4){background:var(--blue)}
+
+nav{position:sticky;top:4px;z-index:200;height:64px;display:flex;align-items:center;padding:0 36px;background:rgba(15,15,15,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.nav-logo-mark{font-family:var(--fh);font-weight:900;font-size:1.15rem;letter-spacing:-.02em;color:#fff;display:flex;align-items:baseline;gap:5px}
+.nav-logo-mark span{color:var(--green2)}
+.nav-links{display:flex;align-items:center;gap:26px;margin-left:auto;list-style:none}
+.nav-links a{font-size:.86rem;font-weight:500;color:var(--body);text-decoration:none;letter-spacing:.04em;transition:color .2s;position:relative}
+.nav-links a:not(.nav-wa):hover{color:var(--white)}
+.nav-links a:not(.nav-wa)::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--green);transition:width .25s}
+.nav-links a:not(.nav-wa):hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--white)}
+.nav-wa{display:flex;align-items:center;gap:8px;background:var(--wa);color:#fff !important;padding:8px 18px;border-radius:8px;font-weight:700 !important;font-size:.82rem !important;box-shadow:0 4px 14px rgba(37,211,102,.25);transition:background .2s,transform .2s !important}
+.nav-wa:hover{background:#1eb659 !important;transform:translateY(-1px) !important}
+.nav-wa::after{display:none !important}
+.nav-mob{display:none;background:none;border:none;color:var(--white);cursor:pointer;padding:4px}
+.mob-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}
+.mob-overlay.open{display:flex}
+.mob-panel{width:280px;background:var(--bg2);border-right:1px solid var(--border2);padding:24px;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform .35s cubic-bezier(.77,0,.18,1)}
+.mob-overlay.open .mob-panel{transform:translateX(0)}
+.mob-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+.mob-x{background:none;border:1px solid var(--border2);color:var(--white);width:32px;height:32px;border-radius:6px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
+.mob-nav{display:flex;flex-direction:column;gap:4px}
+.mob-nav a{display:block;padding:11px 14px;border-radius:8px;font-family:var(--fh);font-size:14px;font-weight:700;color:var(--light);text-decoration:none;text-transform:uppercase;letter-spacing:.04em;transition:background .2s,color .2s}
+.mob-nav a:hover{background:rgba(0,120,71,.12);color:var(--white)}
+.mob-wa-link{margin-top:20px;display:flex;align-items:center;justify-content:center;gap:9px;padding:13px;background:var(--wa);color:#fff;border-radius:8px;font-family:var(--fh);font-size:13px;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.08em}
+
+main{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:0 20px 100px}
+
+.page-hero{text-align:center;padding:70px 20px 20px}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,182,18,.1);border:1px solid rgba(255,182,18,.28);color:var(--gold);padding:6px 16px;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-bottom:20px}
+.page-hero h1{font-family:var(--fh);font-weight:900;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px;color:var(--white)}
+.page-hero p{font-size:1.02rem;color:var(--muted);max-width:620px;margin:0 auto 40px;line-height:1.75}
+
+.section-label{text-align:center;font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700;margin-bottom:12px}
+.section-title{font-family:var(--fh);font-weight:800;font-size:1.6rem;text-transform:uppercase;color:var(--white);text-align:center;margin-bottom:14px;letter-spacing:-.5px}
+.section-sub{text-align:center;font-size:.9rem;color:var(--muted);max-width:640px;margin:0 auto 36px;line-height:1.7}
+
+/* QUOTE CARDS */
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:60px}
+.quote-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:34px 30px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s}
+.quote-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.quote-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.quote-card.commercial::before{background:linear-gradient(90deg,var(--blue),#a855f7)}
+.quote-card.consumer::before{background:linear-gradient(90deg,var(--green),var(--gold))}
+.quote-ico{font-size:2rem;margin-bottom:12px}
+.quote-card h3{font-family:var(--fh);font-weight:800;font-size:1.15rem;color:var(--white);margin-bottom:10px}
+.quote-card p{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.quote-wa-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--wa);color:#fff;border-radius:9px;font-family:var(--fh);font-size:.82rem;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;box-shadow:0 4px 16px rgba(37,211,102,.25);transition:background .2s,transform .2s}
+.quote-wa-btn:hover{background:#1eb659;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.4)}
+
+/* NOTICE - PRICING PENDING */
+.pending-notice{background:rgba(255,182,18,.06);border:1px solid rgba(255,182,18,.22);border-radius:var(--radius);padding:22px 26px;margin-bottom:56px;display:flex;align-items:flex-start;gap:14px}
+.pending-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.pending-text strong{color:var(--white);display:block;margin-bottom:3px;font-size:.92rem}
+.pending-text{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+/* MARKET CONTEXT TABLE */
+.market-section{margin-bottom:56px}
+.market-table-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;overflow-x:auto}
+table.market-table{width:100%;border-collapse:collapse;min-width:600px}
+table.market-table th,table.market-table td{padding:14px 18px;text-align:left;font-size:.84rem;border-bottom:1px solid var(--border)}
+table.market-table th{font-family:var(--fh);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;background:var(--bg2)}
+table.market-table td{color:#ccc}
+table.market-table td:first-child{color:var(--white);font-weight:600}
+table.market-table tr:last-child td{border-bottom:none}
+.market-source{font-size:.72rem;color:var(--muted);text-align:right;padding:10px 18px;background:var(--bg2)}
+.market-caption{font-size:.78rem;color:var(--muted);margin-top:14px;line-height:1.7;text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
+
+/* CALCULATOR-STYLE NOTE for commercial */
+.commercial-note{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 28px;margin-top:20px}
+.commercial-note h4{font-family:var(--fh);font-size:.95rem;color:var(--white);margin-bottom:10px}
+.commercial-note p{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+.faq-section{margin-bottom:56px}
+.faq-section-title{font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:18px;text-align:center}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.faq-item:hover{border-color:var(--border2)}
+details[open].faq-item{border-color:rgba(0,120,71,.3)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;cursor:pointer;font-family:var(--fh);font-size:.9rem;font-weight:700;color:var(--white);list-style:none;user-select:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q svg{flex-shrink:0;color:var(--muted);transition:transform .3s}
+details[open] .faq-q svg{transform:rotate(180deg)}
+.faq-a{padding:16px 22px 18px;font-size:.875rem;color:#bbb;line-height:1.75;border-top:1px solid var(--border)}
+
+.cta-section{margin-top:16px;background:linear-gradient(135deg,rgba(0,120,71,.16),rgba(0,174,239,.1));border:1px solid rgba(0,120,71,.22);border-radius:24px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(0,120,71,.2),transparent 70%)}
+.cta-section h2{font-family:var(--fh);font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-.5px;margin-bottom:10px;position:relative;z-index:1;color:var(--white)}
+.cta-section p{color:var(--muted);font-size:.92rem;margin-bottom:24px;position:relative;z-index:1}
+.cta-primary{background:var(--wa);color:#fff;border:none;padding:14px 32px;border-radius:50px;font-family:var(--fh);font-size:.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(37,211,102,.3);position:relative;z-index:1}
+.cta-primary:hover{background:#1eb659;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.45)}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid var(--border);padding:28px 0}
+.foot-inner{max-width:1140px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.foot-brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.foot-mark{font-family:var(--fh);font-weight:900;font-size:.95rem;color:#fff}
+.foot-mark span{color:var(--green2)}
+.foot-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--green2)}
+.foot-copy{font-size:11px;color:var(--muted)}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:100;width:56px;height:56px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s;animation:waRing 4s 6s infinite}
+.wa-float:hover{transform:scale(1.12);animation:none;box-shadow:0 6px 30px rgba(37,211,102,.6)}
+
+@media(max-width:900px){
+  nav{padding:0 20px}.nav-links{display:none}.nav-mob{display:flex;margin-left:auto}
+  .quote-grid{grid-template-columns:1fr}
+  .foot-inner{flex-direction:column;text-align:center}.foot-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<div class="sa-stripe-top"><span></span><span></span><span></span><span></span></div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">7<span>3</span>5 <span style="color:#fff">Auto</span></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html" class="active">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Book / Contact</a></li>
+    <li>
+      <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20wash%20quote" class="nav-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Get a Quote
+      </a>
+    </li>
+  </ul>
+  <button class="nav-mob" onclick="openMob()" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mob-overlay" id="mobOverlay" onclick="closeMobOut(event)">
+  <div class="mob-panel">
+    <div class="mob-head">
+      <div class="nav-logo-mark">7<span>3</span>5 Auto</div>
+      <button class="mob-x" onclick="closeMob()">✕</button>
+    </div>
+    <div class="mob-nav">
+      <a href="index.html" onclick="closeMob()">Home</a>
+      <a href="services.html" onclick="closeMob()">Services</a>
+      <a href="pricing.html" onclick="closeMob()">Pricing</a>
+      <a href="about.html" onclick="closeMob()">About</a>
+      <a href="contact.html" onclick="closeMob()">Book / Contact</a>
+    </div>
+    <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20wash%20quote" class="mob-wa-link" target="_blank" rel="noopener" onclick="closeMob()">Get a Quote</a>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero reveal">
+    <div class="page-hero-badge">Pricing</div>
+    <h1>Every quote is a real quote —<br>no guessing on WhatsApp.</h1>
+    <p>735 Auto is a new division and we price every job properly: consumer washes by vehicle size and tier, commercial contracts by vehicle count, frequency and site access. Message us and we'll confirm a price before you book anything.</p>
+  </section>
+
+  <div class="quote-grid">
+    <div class="quote-card commercial reveal">
+      <div class="quote-ico">🏭</div>
+      <h3>Commercial Fleet Contracts</h3>
+      <p>No two fleets are the same — pricing is negotiated per contract based on vehicle count, wash frequency, and site access. Tell us what you're running and we'll come back with a monthly rate.</p>
+      <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20fleet%20washing%20contract" class="quote-wa-btn" target="_blank" rel="noopener">Request a Fleet Quote</a>
+    </div>
+    <div class="quote-card consumer reveal">
+      <div class="quote-ico">🚗</div>
+      <h3>Consumer Doorstep Washes</h3>
+      <p>Tell us your vehicle (hatch, sedan, SUV or bakkie) and which tier you want — Standard, Premium or Valet — and we'll WhatsApp you a firm price before we book your slot.</p>
+      <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20doorstep%20wash" class="quote-wa-btn" target="_blank" rel="noopener">Get a Wash Quote</a>
+    </div>
+  </div>
+
+  <div class="pending-notice reveal">
+    <div class="pending-icon">ℹ️</div>
+    <div class="pending-text">
+      <strong>Why no price list yet?</strong>
+      735 Auto's rates are still under final review by the owner and business partner. Rather than publish numbers that might change, every booking gets a firm, confirmed quote on WhatsApp before you commit — so what you're told is what you pay.
+    </div>
+  </div>
+
+  <!-- MARKET CONTEXT -->
+  <section class="market-section">
+    <div class="section-label reveal">For Context</div>
+    <h2 class="section-title reveal">Typical West Coast market pricing</h2>
+    <p class="section-sub reveal">This is published, publicly-available pricing from other mobile and on-site car wash operators researched in September 2026 — shown for context only. It is <strong style="color:#ccc">not</strong> 735 Auto's price list.</p>
+
+    <div class="market-table-wrap reveal">
+      <table class="market-table">
+        <thead>
+          <tr><th>Service Tier</th><th>Hatch / Sedan</th><th>SUV / 7-Seater</th><th>Mini-bus / Taxi</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Wash &amp; Dry (exterior only)</td><td>R90</td><td>R100 – R120</td><td>R150</td></tr>
+          <tr><td>Basic Wash (interior + exterior)</td><td>R180 – R190</td><td>R200 – R230</td><td>R300</td></tr>
+          <tr><td>Machine Polish Wash</td><td>R350</td><td>R400 – R450</td><td>R550</td></tr>
+          <tr><td>Valet (full detail)</td><td>R750</td><td>R800 – R900</td><td>R1,200</td></tr>
+        </tbody>
+      </table>
+      <div class="market-source">Source: national mobile operator &amp; Cape Town fixed-premises operators, researched 2 Sept 2026</div>
+    </div>
+    <p class="market-caption">Commercial fleet rates aren't published anywhere in this market — every operator, including us, negotiates those per contract. Prices drift; if you need a firm number for a bid or budget, ask us directly rather than relying on this table.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-section-title reveal">Pricing Questions</div>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Why can't I just see a price list?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <div class="faq-a">735 Auto's final rates are still being confirmed internally. We'd rather quote you accurately on WhatsApp than publish a number that changes before you book.</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">How fast will I get a quote?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <div class="faq-a">Message us your vehicle type and tier (or fleet size and frequency for commercial) on WhatsApp — we'll respond with a price and available slots.</div>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Does the B-BBEE Level 1 status affect pricing for commercial clients?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+      <div class="faq-a">Our rates are competitive on their own — the B-BBEE Level 1, 100% Black-owned status is a separate, genuine procurement scoring advantage under PPPFA for IDZ tenants, on top of the service itself.</div>
+    </details>
+  </section>
+
+  <section class="cta-section reveal">
+    <h2>Ready for a firm quote?</h2>
+    <p>Tell us your vehicle or fleet on WhatsApp — we'll come back with a price.</p>
+    <a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20wash%20quote" class="cta-primary" target="_blank" rel="noopener">Get a Quote on WhatsApp</a>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="foot-mark">7<span>3</span>5 Auto</div>
+      <div class="foot-sub">A BROD TRADERS division · Langebaan, WC · Part of the LaafStyl network</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Book / Contact</a>
+      <a href="https://laafstyl.org" target="_blank" rel="noopener">LaafStyl — Home</a>
+      <a href="https://web.laafstyl.org" target="_blank" rel="noopener">LaafWeb</a>
+      <a href="https://shuttle.laafstyl.org" target="_blank" rel="noopener">LaafShuttle</a>
+      <a href="https://wa.me/27635016440" target="_blank" rel="noopener">Contact</a>
+    </div>
+    <div class="foot-copy">© 2026 BROD TRADERS (Reg. 2025/529742/07). Built in 🇿🇦 Langebaan.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27635016440?text=Hi%2C%20I%27d%20like%20a%20wash%20quote" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+function openMob()  { document.getElementById('mobOverlay').classList.add('open'); }
+function closeMob() { document.getElementById('mobOverlay').classList.remove('open'); }
+function closeMobOut(e) { if (e.target === document.getElementById('mobOverlay')) closeMob(); }
+</script>
+</body>
+</html>
