@@ -2,7 +2,7 @@
    site off public view before launch. Password lives in this file. */
 (function () {
   var STORAGE_KEY = '735auto_gate_ok';
-  var PASSWORD = 'Laafstyl7357';
+  var PASSWORD = '7357';
 
   if (sessionStorage.getItem(STORAGE_KEY) === '1') return;
 
