@@ -10,8 +10,26 @@
 <meta property="og:title" content="Book ChromeWorkx — WhatsApp Booking">
 <meta property="og:description" content="Message 063 501 6440 on WhatsApp to book a wash or a fleet contract quote.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://auto.laafstyl.org/contact.html">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://auto.laafstyl.org/contact.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<meta property="og:url" content="https://auto.laafstyl.org/contact.html">
+<meta property="og:site_name" content="ChromeWorkx">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:image" content="https://auto.laafstyl.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChromeWorkx: doorstep car care for the West Coast">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book ChromeWorkx — WhatsApp Booking">
+<meta name="twitter:description" content="Message 063 501 6440 on WhatsApp to book a wash or a fleet contract quote.">
+<meta name="twitter:image" content="https://auto.laafstyl.org/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Book / Contact ChromeWorkx","url":"https://auto.laafstyl.org/contact.html","about":{"@id":"https://auto.laafstyl.org/#business"}}</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -146,13 +164,27 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   .area-block{grid-template-columns:1fr;text-align:center}
   .foot-inner{flex-direction:column;text-align:center}.foot-links{justify-content:center}
 }
+
+/* a11y + tap targets (overhaul 2026-10) */
+:focus-visible{outline:2px solid var(--green2);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-64px;z-index:1000;background:var(--green2);color:#0a0a0a;padding:10px 16px;border-radius:6px;font-weight:700;text-decoration:none;transition:top .15s}.skip:focus{top:10px}
+main:focus{outline:none}
+.nav-logo{min-height:44px}
+.nav-links a:not(.nav-wa){padding:10px 0}.nav-links a:not(.nav-wa)::after{bottom:6px}
+.nav-mob{width:44px;height:44px;align-items:center;justify-content:center;padding:0}
+.mob-x{width:44px;height:44px}
+.mob-nav a{padding:13px 14px}
+.value-link{min-height:44px}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+.foot-links{gap:4px 16px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="orb orb-1"></div><div class="orb orb-2"></div>
 <div class="sa-stripe-top"><span></span><span></span><span></span><span></span></div>
 
-<nav>
+<nav aria-label="Main">
   <a href="index.html" class="nav-logo"><div class="nav-logo-mark">Chrome<span style="color:#fff">Workx</span></div></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -167,16 +199,16 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       </a>
     </li>
   </ul>
-  <button class="nav-mob" onclick="openMob()" aria-label="Menu">
+  <button class="nav-mob" onclick="openMob()" aria-label="Open menu" aria-expanded="false" aria-controls="mobOverlay">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
 </nav>
 
-<div class="mob-overlay" id="mobOverlay" onclick="closeMobOut(event)">
+<div class="mob-overlay" id="mobOverlay" onclick="closeMobOut(event)" role="dialog" aria-modal="true" aria-label="Site menu">
   <div class="mob-panel">
     <div class="mob-head">
       <div class="nav-logo-mark">Chrome<span>Workx</span></div>
-      <button class="mob-x" onclick="closeMob()">✕</button>
+      <button class="mob-x" onclick="closeMob()" aria-label="Close menu">✕</button>
     </div>
     <div class="mob-nav">
       <a href="index.html" onclick="closeMob()">Home</a>
@@ -189,13 +221,13 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   </div>
 </div>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="page-hero reveal">
     <div class="page-hero-badge">Book / Contact</div>
     <h1>Let's get your vehicle sorted.</h1>
     <p>ChromeWorkx is WhatsApp-first — message us your vehicle, area, and preferred time, and we'll confirm a slot. No app, no account, no hassle.</p>
     <figure class="hero-banner">
-      <img src="images/foam-wash.jpg" alt="Doorstep car wash in progress with rich foam covering the vehicle" loading="lazy">
+      <img width="940" height="627" src="images/foam-wash.jpg" alt="Doorstep car wash in progress with rich foam covering the vehicle" loading="lazy">
       <figcaption class="hero-banner-cap">ChromeWorkx <span>·</span> Book your slot on WhatsApp</figcaption>
     </figure>
   </section>
@@ -321,9 +353,11 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     updateParallax();
   }
 }
-function openMob()  { document.getElementById('mobOverlay').classList.add('open'); }
-function closeMob() { document.getElementById('mobOverlay').classList.remove('open'); }
+/* MOBILE MENU */
+function openMob()  { var o=document.getElementById('mobOverlay'); o.classList.add('open'); var t=document.querySelector('.nav-mob'); if(t) t.setAttribute('aria-expanded','true'); var x=o.querySelector('.mob-x'); if(x) x.focus(); }
+function closeMob() { var o=document.getElementById('mobOverlay'); o.classList.remove('open'); var t=document.querySelector('.nav-mob'); if(t){ t.setAttribute('aria-expanded','false'); t.focus(); } }
 function closeMobOut(e) { if (e.target === document.getElementById('mobOverlay')) closeMob(); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape' && document.getElementById('mobOverlay').classList.contains('open')) closeMob(); });
 </script>
 </body>
 </html>

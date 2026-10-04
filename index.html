@@ -14,8 +14,27 @@
 <meta property="og:title" content="ChromeWorkx — Doorstep Car Care for the West Coast">
 <meta property="og:description" content="Mobile car wash &amp; detailing for Langebaan homes and Saldanha Bay IDZ fleets. B-BBEE Level 1, 100% Black-owned. Book on WhatsApp.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://auto.laafstyl.org">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://auto.laafstyl.org/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<meta property="og:url" content="https://auto.laafstyl.org/">
+<meta property="og:site_name" content="ChromeWorkx">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:image" content="https://auto.laafstyl.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChromeWorkx: doorstep car care for the West Coast">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChromeWorkx — Doorstep Car Care for the West Coast">
+<meta name="twitter:description" content="Mobile car wash &amp; detailing for Langebaan homes and Saldanha Bay IDZ fleets. B-BBEE Level 1, 100% Black-owned. Book on WhatsApp.">
+<meta name="twitter:image" content="https://auto.laafstyl.org/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoWash","@id":"https://auto.laafstyl.org/#business","name":"ChromeWorkx","url":"https://auto.laafstyl.org/","description":"Mobile car wash and detailing for Langebaan homes and fleet washing for Saldanha Bay IDZ businesses. A division of BROD TRADERS (Pty) Ltd.","telephone":"+27635016440","image":"https://auto.laafstyl.org/og.png","address":{"@type":"PostalAddress","addressLocality":"Langebaan","addressRegion":"Western Cape","postalCode":"7357","addressCountry":"ZA"},"areaServed":[{"@type":"Place","name":"Langebaan"},{"@type":"Place","name":"Saldanha Bay"}],"parentOrganization":{"@type":"Organization","name":"BROD TRADERS (Pty) Ltd","legalName":"BROD TRADERS (Pty) Ltd","identifier":"2025/529742/07","address":{"@type":"PostalAddress","addressLocality":"Langebaan","addressRegion":"Western Cape","addressCountry":"ZA"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ChromeWorkx","url":"https://auto.laafstyl.org/","publisher":{"@id":"https://auto.laafstyl.org/#business"}}</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -173,14 +192,51 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   .foot-inner{flex-direction:column;text-align:center}.foot-links{justify-content:center}
 }
 @media(max-width:480px){.hero h1{font-size:2rem}.cta-section{padding:40px 20px}.stats-grid{grid-template-columns:1fr 1fr}}
+
+/* a11y + tap targets (overhaul 2026-10) */
+:focus-visible{outline:2px solid var(--green2);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-64px;z-index:1000;background:var(--green2);color:#0a0a0a;padding:10px 16px;border-radius:6px;font-weight:700;text-decoration:none;transition:top .15s}.skip:focus{top:10px}
+main:focus{outline:none}
+.nav-logo{min-height:44px}
+.nav-links a:not(.nav-wa){padding:10px 0}.nav-links a:not(.nav-wa)::after{bottom:6px}
+.nav-mob{width:44px;height:44px;align-items:center;justify-content:center;padding:0}
+.mob-x{width:44px;height:44px}
+.mob-nav a{padding:13px 14px}
+.value-link{min-height:44px}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+.foot-links{gap:4px 16px}
+
+/* HERO: car being washed (SVG; transform/opacity/stroke-dashoffset only) */
+.car{display:block;width:min(560px,88%);height:auto;margin:0 auto 56px;overflow:visible}
+.car path,.car circle{vector-effect:none}
+.car-body,.car-line{fill:none;stroke:var(--green2);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1}
+.car-body{fill:rgba(201,162,39,.06)}
+.car-ground{stroke:var(--border2);stroke-width:2;fill:none}
+.car-shine{transform:translateX(250px) skewX(-18deg);opacity:.5}
+.car-foam circle{fill:none;stroke:#fff;stroke-opacity:.55;stroke-width:1.4}
+@media(prefers-reduced-motion:no-preference){
+  .car-body,.car-line{stroke-dashoffset:1;animation:carDraw 1.7s cubic-bezier(.45,.05,.25,1) .25s forwards}
+  .car-line{animation-delay:.7s}
+  .car-ground{opacity:0;animation:carFade .8s ease 1.4s forwards}
+  .car-shine{opacity:1;animation:carSweep 7s cubic-bezier(.4,0,.2,1) 2s infinite}
+  .car-foam circle{opacity:0;transform-box:fill-box;transform-origin:center;animation:carFoam 4.2s ease-in-out infinite}
+  .car-foam circle:nth-child(1){animation-delay:2.4s}.car-foam circle:nth-child(2){animation-delay:2.9s}.car-foam circle:nth-child(3){animation-delay:3.4s}
+  .car-foam circle:nth-child(4){animation-delay:3.0s}.car-foam circle:nth-child(5){animation-delay:3.7s}.car-foam circle:nth-child(6){animation-delay:2.7s}
+  .car.is-off *{animation-play-state:paused !important}
+}
+@keyframes carDraw{to{stroke-dashoffset:0}}
+@keyframes carFade{to{opacity:1}}
+@keyframes carSweep{0%{transform:translateX(-120px) skewX(-18deg)}22%,100%{transform:translateX(700px) skewX(-18deg)}}
+@keyframes carFoam{0%{opacity:0;transform:translateY(6px) scale(.5)}25%{opacity:.9}100%{opacity:0;transform:translateY(-22px) scale(1.25)}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="orb orb-1"></div><div class="orb orb-2"></div>
 <div class="sa-stripe-top"><span></span><span></span><span></span><span></span></div>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Main">
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">Chrome<span style="color:#fff">Workx</span></div>
   </a>
@@ -197,17 +253,17 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       </a>
     </li>
   </ul>
-  <button class="nav-mob" onclick="openMob()" aria-label="Menu">
+  <button class="nav-mob" onclick="openMob()" aria-label="Open menu" aria-expanded="false" aria-controls="mobOverlay">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mob-overlay" id="mobOverlay" onclick="closeMobOut(event)">
+<div class="mob-overlay" id="mobOverlay" onclick="closeMobOut(event)" role="dialog" aria-modal="true" aria-label="Site menu">
   <div class="mob-panel">
     <div class="mob-head">
       <div class="nav-logo-mark">Chrome<span>Workx</span></div>
-      <button class="mob-x" onclick="closeMob()">✕</button>
+      <button class="mob-x" onclick="closeMob()" aria-label="Close menu">✕</button>
     </div>
     <div class="mob-nav">
       <a href="index.html" onclick="closeMob()">Home</a>
@@ -223,7 +279,7 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   </div>
 </div>
 
-<main>
+<main id="main" tabindex="-1">
   <!-- HERO -->
   <section class="hero reveal">
     <div class="hero-badge">🇿🇦 Born in 7357 · Langebaan &amp; Saldanha Bay</div>
@@ -236,11 +292,23 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       </a>
       <a href="services.html" class="btn-secondary">See Our Services</a>
     </div>
-    <div class="sa-stripe"><span></span><span></span><span></span><span></span></div>
+    <svg class="car" viewBox="0 0 600 190" aria-hidden="true" focusable="false" width="600" height="190">
+      <defs>
+        <clipPath id="carClip"><path d="M40,138 L40,114 Q40,102 54,99 L122,92 L168,54 Q175,48 187,48 L348,48 Q362,48 372,57 L416,94 L518,104 Q550,108 560,124 L560,138 L505,138 A45,45 0 0 0 415,138 L185,138 A45,45 0 0 0 95,138 Z"/><circle cx="140" cy="138" r="34"/><circle cx="460" cy="138" r="34"/></clipPath>
+        <linearGradient id="carShine" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      </defs>
+      <path class="car-body" pathLength="1" d="M40,138 L40,114 Q40,102 54,99 L122,92 L168,54 Q175,48 187,48 L348,48 Q362,48 372,57 L416,94 L518,104 Q550,108 560,124 L560,138 L505,138 A45,45 0 0 0 415,138 L185,138 A45,45 0 0 0 95,138 Z"/>
+      <path class="car-line" pathLength="1" d="M180,92 L206,60 L262,60 L262,92 Z M274,60 L346,60 Q352,60 358,65 L392,92 L274,92 Z M268,60 L268,134 M286,106 L308,106"/>
+      <circle class="car-line" pathLength="1" cx="140" cy="138" r="34"/><circle class="car-line" pathLength="1" cx="140" cy="138" r="14"/>
+      <circle class="car-line" pathLength="1" cx="460" cy="138" r="34"/><circle class="car-line" pathLength="1" cx="460" cy="138" r="14"/>
+      <path class="car-ground" d="M10,172 L590,172"/>
+      <g clip-path="url(#carClip)"><rect class="car-shine" x="-40" y="0" width="90" height="190" fill="url(#carShine)"/></g>
+      <g class="car-foam"><circle cx="228" cy="40" r="5"/><circle cx="246" cy="30" r="3.2"/><circle cx="214" cy="28" r="2.6"/><circle cx="300" cy="34" r="4.4"/><circle cx="320" cy="22" r="2.8"/><circle cx="488" cy="86" r="4"/></g>
+    </svg>
     <figure class="hero-banner">
-      <video autoplay muted loop playsinline preload="auto" poster="images/hero-detailing.jpg" aria-label="Looping footage of a detailer washing a black car by hand">
+      <video autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" width="854" height="480" aria-label="Looping footage of a detailer washing a black car by hand">
         <source src="videos/hero-detailing.mp4" type="video/mp4">
-        <img src="images/hero-detailing.jpg" alt="Detailer's gloved hands hand-polishing a car's black paintwork to a high-end shine" loading="lazy">
+        <img width="940" height="625" src="images/hero-detailing.jpg" alt="Detailer's gloved hands hand-polishing a car's black paintwork to a high-end shine" loading="lazy">
       </video>
       <figcaption class="hero-banner-cap">ChromeWorkx <span>·</span> Doorstep detailing, done right</figcaption>
     </figure>
@@ -249,7 +317,7 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
   <!-- STATS -->
   <section class="stats-grid">
     <div class="stat-card reveal">
-      <div class="stat-num" data-count="1">Level 1</div>
+      <div class="stat-num">Level 1</div>
       <div class="stat-lbl">B-BBEE Status</div>
     </div>
     <div class="stat-card reveal">
@@ -257,11 +325,11 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       <div class="stat-lbl">Black-Owned EME</div>
     </div>
     <div class="stat-card reveal">
-      <div class="stat-num" data-count="2">0</div>
+      <div class="stat-num">2</div>
       <div class="stat-lbl">Integrated Service Lines</div>
     </div>
     <div class="stat-card reveal">
-      <div class="stat-num" data-count="3">0</div>
+      <div class="stat-num">3</div>
       <div class="stat-lbl">Consumer Wash Tiers</div>
     </div>
   </section>
@@ -273,7 +341,7 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
 
   <div class="value-grid">
     <div class="value-card commercial reveal">
-      <img class="card-img" src="images/foam-wash.jpg" alt="High-pressure foam wash being applied to a fleet vehicle" loading="lazy">
+      <img class="card-img" width="940" height="625" src="images/foam-wash.jpg" alt="High-pressure foam wash being applied to a fleet vehicle" loading="lazy">
       <div class="value-ico">🏭</div>
       <div class="value-badge">Commercial · B2B</div>
       <h3>Fleet washing for Saldanha Bay IDZ</h3>
@@ -287,7 +355,7 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
       <a href="services.html#commercial" class="value-link">View commercial services →</a>
     </div>
     <div class="value-card consumer reveal">
-      <img class="card-img" src="images/leather-interior.jpg" alt="Freshly detailed premium leather car interior" loading="lazy">
+      <img class="card-img" width="940" height="625" src="images/leather-interior.jpg" alt="Freshly detailed premium leather car interior" loading="lazy">
       <div class="value-ico">🚗</div>
       <div class="value-badge">Consumer · B2C</div>
       <h3>Doorstep washes for Langebaan</h3>
@@ -296,7 +364,7 @@ footer{position:relative;z-index:1;background:var(--bg2);border-top:1px solid va
         <li><span class="feat-icon">✓</span> On-demand doorstep bookings via WhatsApp / phone</li>
         <li><span class="feat-icon">✓</span> Standard wash, premium detail &amp; interior valet tiers</li>
         <li><span class="feat-icon">✓</span> Great for 4x4s &amp; bakkies near the lagoon and beach</li>
-        <li><span class="feat-icon">✓</span> Off-peak slots fill fast — book ahead</li>
+        <li><span class="feat-icon">✓</span> Book ahead for the slot you want</li>
       </ul>
       <a href="services.html#consumer" class="value-link">View consumer services →</a>
     </div>
@@ -385,32 +453,20 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   }
 }
 
-/* ANIMATED COUNTERS */
-const counterEls = document.querySelectorAll('.stat-num[data-count]');
-const countObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-    const target = parseInt(el.dataset.count, 10);
-    const dur = 900;
-    const start = performance.now();
-    function tick(now) {
-      const p = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(eased * target);
-      if (p < 1) requestAnimationFrame(tick);
-      else el.textContent = target;
-    }
-    requestAnimationFrame(tick);
-    countObserver.unobserve(el);
-  });
-}, { threshold: 0.4 });
-counterEls.forEach(el => countObserver.observe(el));
 
 /* MOBILE MENU */
-function openMob()  { document.getElementById('mobOverlay').classList.add('open'); }
-function closeMob() { document.getElementById('mobOverlay').classList.remove('open'); }
+function openMob()  { var o=document.getElementById('mobOverlay'); o.classList.add('open'); var t=document.querySelector('.nav-mob'); if(t) t.setAttribute('aria-expanded','true'); var x=o.querySelector('.mob-x'); if(x) x.focus(); }
+function closeMob() { var o=document.getElementById('mobOverlay'); o.classList.remove('open'); var t=document.querySelector('.nav-mob'); if(t){ t.setAttribute('aria-expanded','false'); t.focus(); } }
 function closeMobOut(e) { if (e.target === document.getElementById('mobOverlay')) closeMob(); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape' && document.getElementById('mobOverlay').classList.contains('open')) closeMob(); });
+
+/* HERO car: pause the loop while off-screen */
+(function(){var c=document.querySelector('.car'); if(!c||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(es){ es.forEach(function(e){ c.classList.toggle('is-off', !e.isIntersecting); }); }).observe(c);})();
+/* HERO video: poster only for reduced-motion users; pause when off-screen */
+(function(){var v=document.querySelector('.hero-banner video'); if(!v) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ v.removeAttribute('autoplay'); v.pause(); return; }
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else v.pause(); }); },{threshold:.1}).observe(v);})();
 </script>
 </body>
 </html>
